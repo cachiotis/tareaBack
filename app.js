@@ -4,6 +4,8 @@ const tareasRoutes = require('./routes/tareas');
 const dotenv = require('dotenv'); // Importar dotenv para manejar variables de entorno
 const path = require('path');
 const app = express();
+const cors = require('cors');
+
 // Cargar variables de entorno desde .env
 dotenv.config();
 // Middleware para parsear JSON
