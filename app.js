@@ -4,7 +4,7 @@ const tareasRoutes = require('./routes/tareas');
 const dotenv = require('dotenv'); // Importar dotenv para manejar variables de entorno
 const path = require('path');
 const app = express();
-const cors = require('cors');
+
 
 // Cargar variables de entorno desde .env
 dotenv.config();
@@ -16,6 +16,7 @@ app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
     next();
 });
+
 
 // Servir archivos estáticos
 app.use(express.static(path.join(__dirname, '../frontend/public/')));
