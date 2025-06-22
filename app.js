@@ -6,7 +6,7 @@ const path = require('path');
 const app = express();
 const cors = require('cors');
 const corsOptions = {
-    origin: 'https://tareaback-actualizado.onrender.com',
+    origin: 'https://tarea-front.vercel.app',
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type',
 };
