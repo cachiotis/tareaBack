@@ -1,5 +1,5 @@
 const express = require('express');
-const Tarea = require('../models/Tarea');
+const Tarea = require('../models/tarea');
 const router = express.Router();
 
 // Crear una tareas (POST)
