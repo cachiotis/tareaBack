@@ -4,6 +4,17 @@ const tareasRoutes = require('./routes/tareas');
 const dotenv = require('dotenv'); // Importar dotenv para manejar variables de entorno
 const path = require('path');
 const app = express();
+const cors = require('cors');
+const corsOptions = {
+    origin: 'https://tareaback-actualizado.onrender.com',
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type',
+};
+
+app.use(cors(corsOptions));
+app.listen(3000, () => {
+    console.log('Servidor iniciado en el puerto 3000');
+});
 
 
 // Cargar variables de entorno desde .env
