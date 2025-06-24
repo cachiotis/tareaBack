@@ -4,6 +4,7 @@ const tareasRoutes = require('./routes/tareas');
 const dotenv = require('dotenv'); // Importar dotenv para manejar variables de entorno
 const path = require('path');
 const app = express();
+
 const cors = require('cors');
 const corsOptions = {
     origin: 'https://tarea-front.vercel.app',
@@ -16,7 +17,6 @@ app.listen(3000, () => {
     console.log('Servidor iniciado en el puerto 3000');
 });
 
-
 // Cargar variables de entorno desde .env
 dotenv.config();
 // Middleware para parsear JSON
@@ -27,7 +27,6 @@ app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
     next();
 });
-
 
 // Servir archivos estáticos
 app.use(express.static(path.join(__dirname, '../frontend/public/')));
